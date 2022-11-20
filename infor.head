@@ -1,0 +1,5 @@
+#include "/scratchfs/bes/liucheng/cross_section/Rc_ana/tagDm.h"
+
+void XXX()
+{
+    TChain *chaindata=new TChain("tagDm");

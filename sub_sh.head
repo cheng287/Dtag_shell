@@ -1,0 +1,4 @@
+#!/bin/bash -f
+#source ~/.bashrc
+
+root -l XXX
