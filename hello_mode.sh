@@ -173,7 +173,6 @@ do
         if [ $number_2 -eq $x ]
         then 
             energy_points[$energy_i]=${infor[$number_2]}
-            #energy_points[${#energy_points[@]}]=${infor[$number_2]}   这行代码错误
             #echo "xxxxxxxxx"
             echo ${energy_points[$energy_i]}
             let energy_i++
