@@ -1,0 +1,22 @@
+    tagDm Data(chaindata);
+    const auto nentries = chaindata->GetEntries();
+    cout<<"nentries = "<<nentries<<endl;
+        
+    //TTree *T2 = chaindata->CopyTree("mmode==1&&mrun>100");
+    auto newtree = chaindata->CloneTree(0);
+
+    for(int j = 0;j < nentries;j++)
+    //for(int j = 0;j < 1e4;j++)
+    //for (auto j : ROOT::TSeqI(nentries))
+    {
+        chaindata->GetEntry(j);
+        if (Data.mmode ==HHH_MODE && Data.mcharm == 1)
+            newtree->Fill();
+    }
+        
+    TFile f("../root/mode_HHH_MODE/XXX.root","recreate");
+    newtree->Write();
+    f.Close();
+
+    cout<<"* * * * * ok, it is finished ! ! ! "<<endl;
+}

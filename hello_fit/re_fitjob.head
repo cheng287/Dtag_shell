@@ -1,0 +1,25 @@
+
+
+    RooRealVar  mmass("m_mass", "invariant pmass", 1.75, 1.95, "GeV/c^{2}");
+
+    RooRealVar  mean1("mean1","Mean of Gaussian1", 1.865, 1.76, 1.92);
+    RooRealVar  sigma1("sigma1","",0.008,0.0,0.02);
+    RooGaussian gauss1("gauss1","",mmass,mean1,sigma1);
+
+    RooRealVar  mean2("mean2","Mean of Gaussian2", 1.865, 1.76, 1.92);
+    RooRealVar  sigma2("sigma2","",0.012,0.,0.025);
+    RooGaussian gauss2("gauss2","",mmass,mean2,sigma2);
+
+    RooRealVar fsig("fsig","first guass ",0.5,0.01,1.0) ;
+    RooAddPdf gauss12("gaus12","gauss1+gauss2",RooArgList(gauss1,gauss2),    fsig) ;
+
+    RooRealVar   c0("c0","coefficient 0",-0.01,-2.0,2.0);
+    RooRealVar   c1("c1","coefficient 1",0.01,-2.,2.);
+    RooChebychev fbkg("fbkg","FBKG",mmass,RooArgList(c0,c1));
+
+    RooRealVar nsig("nsig", "NSig", 1000., 0., 10000.);
+    RooRealVar nbkg("nbkg", "NBKG", 1000., 0., 40000.);
+    RooAddPdf  ftot("ftot", "Ftot", RooArgList(gauss12, fbkg), RooArgList(nsig,nbkg));
+
+
+
