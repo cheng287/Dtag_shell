@@ -1,0 +1,36 @@
+
+find_error_fit.sh  - - - find fit parameters with corresponding error  2023/4/29  - - - for data
+
+'find_fit.sh' , 're_find_fit.sh'    - - - -  - - after change  - - for data
+
+'find_eff_fit.sh'    -  - --  - for eff_weight which come from MC  - - f
+or MC
+
+How to use it ?
+To execute this shell code, you just need to enter :
+        ./find_fit.sh
+    the fit result information will generate.
+    such as  'result_mode_0.txt' , 'result_mode_1.txt' and so on.
+
+
+The failed jobs will be placed in path ../ouput/fit/mode_i/energy_i/faild/ ,
+such as ../output/fit/mode_0/4610/failed .
+
+
+How to find again ?
+ You just enter:
+    ./re_find_fit.sh
+  and the fit information result will put in the 'rerun_result_mode_i.txt' .
+
+
+
+
+
+
+only_momentum_dif_cr_find_error_fit.sh - - -找微分截面--only momentum   2023/5/9
+only_momentum_dif_cr_re_find_fit.sh
+
+
+
+  dif_cr_find_error_fit.sh  - - 找微分截面  - - - 2023/5/9
+  dif_cr_re_find_fit.sh  - -  -找微分截面

@@ -1,0 +1,13 @@
+/besfs5/groups/psip/psipgroup/user/liucheng/Rc_data/inclusive_MC/incluMC_4946/signal/outputroot/sigmc_0.root
+/besfs5/groups/psip/psipgroup/user/liucheng/Rc_data/inclusive_MC/incluMC_4946/signal/outputroot/sigmc_1.root
+/besfs5/groups/psip/psipgroup/user/liucheng/Rc_data/inclusive_MC/incluMC_4946/signal/outputroot/sigmc_2.root
+/besfs5/groups/psip/psipgroup/user/liucheng/Rc_data/inclusive_MC/incluMC_4946/signal/outputroot/sigmc_3.root
+/besfs5/groups/psip/psipgroup/user/liucheng/Rc_data/inclusive_MC/incluMC_4946/signal/outputroot/sigmc_4.root
+/besfs5/groups/psip/psipgroup/user/liucheng/Rc_data/inclusive_MC/incluMC_4946/signal/outputroot/sigmc_5.root
+/besfs5/groups/psip/psipgroup/user/liucheng/Rc_data/inclusive_MC/incluMC_4946/signal/outputroot/sigmc_6.root
+/besfs5/groups/psip/psipgroup/user/liucheng/Rc_data/inclusive_MC/incluMC_4946/signal/outputroot/sigmc_7.root
+/besfs5/groups/psip/psipgroup/user/liucheng/Rc_data/inclusive_MC/incluMC_4946/signal/outputroot/sigmc_8.root
+/besfs5/groups/psip/psipgroup/user/liucheng/Rc_data/inclusive_MC/incluMC_4946/signal/outputroot/sigmc_9.root
+/besfs5/groups/psip/psipgroup/user/liucheng/Rc_data/inclusive_MC/incluMC_4946/signal/outputroot/sigmc_10.root
+/besfs5/groups/psip/psipgroup/user/liucheng/Rc_data/inclusive_MC/incluMC_4946/signal/outputroot/sigmc_11.root
+/besfs5/groups/psip/psipgroup/user/liucheng/Rc_data/inclusive_MC/incluMC_4946/signal/outputroot/sigmc_12.root

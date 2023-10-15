@@ -1,0 +1,1 @@
+/scratchfs/bes/liucheng/cross_section/work_Rc/test_mc_efficiency/io_check/mc_signal/output/root/mode_401/mc_4946_mode401_001.root

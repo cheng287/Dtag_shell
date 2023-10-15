@@ -1,0 +1,103 @@
+#include "RooRealVar.h"
+#include "RooDataSet.h"
+#include "RooGaussian.h"
+#include "RooChebychev.h"
+#include "RooAddPdf.h"
+#include "TCanvas.h"
+#include "TAxis.h"
+#include "RooPlot.h"
+#include <cstdio>
+#include <iostream> 
+#include "/scratchfs/bes/liucheng/cross_section/Rc_MC_eff_weight/mode_0/D0/ana/tagDm.C" 
+
+using namespace RooFit;
+// Set the general style options
+void SetStyle()
+{
+    gStyle->SetOptStat(kFALSE);
+    // No Canvas Border
+    gStyle->SetCanvasBorderMode(0);
+    gStyle->SetCanvasBorderSize(0);
+    // White BG
+    gStyle->SetCanvasColor(10);
+    // Format for axes
+    gStyle->SetLabelFont(42,"xyz");
+    gStyle->SetLabelSize(0.04,"xyz");
+    gStyle->SetLabelOffset(0.01,"xyz");
+    gStyle->SetNdivisions(510,"xyz");
+    gStyle->SetTitleFont(42,"xyz");
+    gStyle->SetTitleColor(1,"xyz");
+    gStyle->SetTitleSize(0.07,"xyz");
+    gStyle->SetTitleOffset(1.15,"xyz");
+    // No pad borders
+    gStyle->SetPadBorderMode(0);
+    gStyle->SetPadBorderSize(0);
+    // White BG
+    gStyle->SetPadColor(10);
+    // Margins for labels etc.
+    // No error bars in x direction
+    gStyle->SetErrorX(0);
+    // Format legend
+    gStyle->SetOptTitle(0);
+    gStyle->SetPadLeftMargin(0.22);
+    gStyle->SetPadBottomMargin(0.20);
+    gStyle->SetPadRightMargin(0.05);
+    gStyle->SetPadTopMargin(0.10);
+}
+void FormatMC1(TH1 * mc1hist, Int_t color)
+{
+    mc1hist->SetLineColor(color);
+    mc1hist->SetLineWidth(4);
+}
+void NameAxes(TH1 * datahist, TString xname, TString yname)
+{
+    if(xname)
+        datahist->GetXaxis()->SetTitle(xname);
+    if(yname)
+        datahist->GetYaxis()->SetTitle(yname);
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+
+
+void XXX()
+{
+
+    freopen("XXX.cpp.sh.out","w",stdout); 
+    
+    SetStyle();
+    
+    ////////////////////////////////////////////////////////
+    cout<<"paramter_begin_paramter_begin"<<endl;
+
+    RooRealVar  mmass("m_mass", "invariant pmass", 1.75, 1.95, "GeV/c^{2}");
+    RooRealVar  wgt("m_weight","mweight",0,100);
+
+    RooRealVar  mean1("mean1","Mean of Gaussian1", 1.865, 1.84, 1.9);
+    RooRealVar  sigma1("sigma1","",0.008,0.0,0.01);
+    RooGaussian gauss1("gauss1","",mmass,mean1,sigma1);
+
+    RooRealVar  mean2("mean2","Mean of Gaussian2", 1.865, 1.84, 1.9);
+    RooRealVar  sigma2("sigma2","",0.012,0.0,0.02);
+    RooGaussian gauss2("gauss2","",mmass,mean2,sigma2);
+
+    RooRealVar fsig("fsig","first guass ",0.5,0.05,1.0) ;
+    RooAddPdf gauss12("gaus12","gauss1+gauss2",RooArgList(gauss1,gauss2),    fsig) ;
+
+    RooRealVar   c0("c0","coefficient 0",-0.01,-2.0,2.0);
+    RooRealVar   c1("c1","coefficient 1",0.01,-0.2,0.2);
+    RooChebychev fbkg("fbkg","FBKG",mmass,RooArgList(c0,c1));
+
+    RooRealVar nsig("nsig", "NSig", 200000., 0., 400000.);
+    RooRealVar nbkg("nbkg", "NBKG", 1000000., 0., 1500000.);
+    RooAddPdf  ftot("ftot", "Ftot", RooArgList(gauss12, fbkg), RooArgList(nsig,nbkg));
+
+    cout<<"paramter_end_paramter_end"<<endl;
+    
+    ////////////////////////////////////////////////////////
+
+    ///////////////////////- - Merge two different trees into a new tree - - -begin///////////////
+    
+    TChain *chaindata=new TChain("tagDm");
+

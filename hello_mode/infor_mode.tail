@@ -1,0 +1,65 @@
+    tagDm Data(chaindata);
+    const auto nentries = chaindata->GetEntries();
+    cout<<"nentries = "<<nentries<<endl;
+        
+    TTree* newtree = new TTree("tagDm", "New Tree");
+
+    Int_t           mmode;
+    Double_t        mtype;
+    Int_t           mcharm;
+    Double_t        mmass;
+    Double_t        mDp;
+    Double_t        mDe;
+    Double_t        mDpx;
+    Double_t        mDpy;
+    Double_t        mDpz;
+    Double_t        mDct;
+    Int_t           mrun;
+    Int_t           mevent;
+
+    // Create new branches in the new tree with the same structure
+    newtree->Branch("mmode",    &mmode,     "mmode/I");
+    newtree->Branch("mtype",    &mtype,     "mtype/D");
+    newtree->Branch("mcharm",   &mcharm,    "mcharm/I");
+    newtree->Branch("mmass",    &mmass,     "mmass/D");
+    newtree->Branch("mDp",      &mDp,       "mDp/D");
+    newtree->Branch("mDe",      &mDe,       "mDe/D");
+    newtree->Branch("mDpx",     &mDpx,      "mDpx/D");
+    newtree->Branch("mDpy",     &mDpy,      "mDpy/D");
+    newtree->Branch("mDpz",     &mDpz,      "mDpz/D");
+    newtree->Branch("mDct",     &mDct,      "mDct/D");
+    newtree->Branch("mrun",     &mrun,      "mrun/I");
+    newtree->Branch("mevent",   &mevent,    "mevent/I");
+
+    //for(int j = 0;j < nentries;j++)
+    //for(int j = 0;j < 1000;j++)
+    for (auto j : ROOT::TSeqI(nentries))
+    {
+        chaindata->GetEntry(j);
+        // if (Data.mmode ==HHH_MODE && (Data.mrun>= HHHRUN_LOW) && (Data.mrun<= HHHRUN_HIGH))
+        if (Data.mmode ==HHH_MODE )
+        {
+            mmode    = Data.mmode;   
+            mtype    = Data.mtype;   
+            mcharm   = Data.mcharm;  
+            mmass    = Data.mmass;   
+            mDp      = Data.mDp;     
+            mDe      = Data.mDe;     
+            mDpx     = Data.mDpx;    
+            mDpy     = Data.mDpy;    
+            mDpz     = Data.mDpz;    
+            mDct     = Data.mDct;    
+            mrun     = Data.mrun;    
+            mevent   = Data.mevent;  
+                   
+            
+            newtree->Fill();
+        }
+    }
+        
+    TFile f("../root/mode_HHH_MODE/XXX.root","recreate");
+    newtree->Write();
+    f.Close();
+
+    cout<<"* * * * * ok, it is finished ! ! ! "<<endl;
+}

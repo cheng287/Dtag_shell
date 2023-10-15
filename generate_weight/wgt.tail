@@ -1,0 +1,98 @@
+    tagDm Data(chaindata);
+
+    // int nentries = (int)chaindata->GetEntries();
+    const auto nentries = chaindata->GetEntries();
+    cout<<"- - - - the number of chaindata nentries =  "<< nentries <<endl;
+    cout<<endl;
+
+    
+    ///////////////////////////////////////////////////////////
+    //* * * * * * * * two-D vector  - - Par_weight.list (momentum_low,momentum_high, coshteta_low, costheta_high , weight)
+    cout<<"------"<<endl;
+    
+    char filename[200] = "PAR_WEIGHT_PAR_WEIGHT/new_2g_weight_MODE_MODE.list";
+    // char filename[200] = "PAR_WEIGHT_PAR_WEIGHT/Par_weight_MODE_MODE.list";
+    //char filename[100] = "PAR_WEIGHT_PAR_WEIGHT/Par_weight.list";
+    //int row = CountLines(filename);
+    int row = coutline(filename);
+    int column = 5 ;
+    cout<< "row = "<< row <<endl;
+
+    vector<std::vector<double> > costheta_momentum_wgt;
+	std::vector<double> one_row;		//row vector
+	std::ifstream ifstr_data(filename);	//read file
+	double d;							//Intermediate value of value transfer	
+
+	for (int line_count = 0; line_count < row; line_count++)
+	{
+		for (int row_count = 0; row_count < column; row_count++)
+		{
+			ifstr_data >> d;
+			one_row.push_back(d);
+		}
+		costheta_momentum_wgt.push_back(one_row);
+        one_row.clear();
+	}
+	ifstr_data.close();
+
+
+    for(int j = 0 ; j < row ; j ++)
+    {
+        for(int k =0; k < column; k++) 
+        {
+            cout<< costheta_momentum_wgt[j][k] << "     ";
+        }
+
+        cout<<endl;
+    }
+
+    cout<<"the size of costheta-momentum vector  = "<<costheta_momentum_wgt.size()<<endl;
+
+    //int j = coutline(filename);
+    //cout<<"- - - - "<< j<<endl;
+   
+    int xx = 0;
+   
+    TTree *weight = new TTree("weight","");
+    Double_t wgt;                                                                                                  
+    weight->Branch("wgt", &wgt,"wgt/D");
+
+    // for(int j = 0; j < nentries ; j++ )
+    for (auto j : ROOT::TSeqI(nentries))
+    //for(int j = 0; j < 100 ; j++ )
+    {
+        chaindata->GetEntry(j);
+      
+        //if(Data.mmode != 0 || Data.mcharm != 1) continue;
+        if(Data.mcharm != 1) continue;
+        
+        TLorentzVector D_meson;
+        D_meson.SetPxPyPzE(Data.mDpx,Data.mDpy, Data.mDpz, Data.mDe);
+        double costheta = D_meson.CosTheta();
+
+        for(int k = 0 ; k < costheta_momentum_wgt.size(); k++)
+        {
+            if(Data.mDp > costheta_momentum_wgt[k][0] && Data.mDp <= costheta_momentum_wgt[k][1] && costheta >costheta_momentum_wgt[k][2] && costheta <=costheta_momentum_wgt[k][3] )
+            {
+                //cout<<" * * * * * "<<  Data.mDp  << "  "<<costheta <<"- - - "<<costheta_momentum_wgt[k][0] <<"  "<<  costheta_momentum_wgt[k][1]<<"  "<< costheta_momentum_wgt[k][2]<< "  "<< costheta_momentum_wgt[k][3] << "  "<< costheta_momentum_wgt[k][4]<<endl;
+                wgt = costheta_momentum_wgt[k][4];
+                weight->Fill();
+                xx++;
+                break;
+            }
+        }       
+        //cout<<" +++++++ "<<  Data.mDp  << "  "<<costheta <<endl;
+        //cout<<"- - - - - - / / / / /  /"<<endl;
+
+
+    }   
+    cout<<"afer the cut requirement , the number of events = "<<xx<<endl;
+
+    TFile *f = new TFile("XXX.root","recreate");
+    weight->Write();
+    f->Close();
+
+    delete chaindata;
+    delete weight;
+
+}

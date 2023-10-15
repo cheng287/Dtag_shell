@@ -1,0 +1,60 @@
+#include "/scratchfs/bes/liucheng/cross_section/others/Rc_ana/tagDm.h"
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <vector> 
+using namespace std;
+
+
+//- - - - - - The blank line is recorded here.
+int CountLines(char *filename)  //- -  Get the number of lines in a file
+{
+	ifstream ReadFile;
+	int n = 0;
+	string temp;
+	ReadFile.open(filename, ios::in);//ios::in - - Indicates that the file is read in read-only mode
+	if (ReadFile.fail())//- -  File open failed: return 0
+	{
+		return 0;
+	}
+	else//- -  The file exists, returns the number of lines in the file
+	{
+		while (getline(ReadFile, temp))
+		{
+			n++;
+		}
+		return n;
+	}
+	ReadFile.close();
+}
+
+//- - - - - - This one ignores blank lines.
+int coutline(char *filename)
+{
+    int line = 0;
+    ifstream infile;
+    infile.open(filename); 
+    
+    if(!infile.is_open())
+        return 0;
+    
+    std::string strLine;
+    while(getline(infile,strLine))
+    {
+        if(strLine.empty())
+            continue;
+        line++;
+
+    }
+
+    infile.close();  
+    return line;
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void XXX()
+{
+    TChain *chaindata=new TChain("tagDm");
