@@ -1,0 +1,64 @@
+    
+    //chaindata->Add("../4740_4900/Rc_4740to4960_*.root");                          //it will take a very long time to fit them together
+    RooDataSet* rawdata = new RooDataSet("rawdata", "rawdata", chaindata, ntupleVarSet);
+    
+    //* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+    //
+    //TCut cut1 = "mrun>0";
+    //TCut cut2 = "mmode==1";
+    //RooDataSet *data = (RooDataSet *)rawdata->reduce(Cut(""));
+    //RooDataSet *data = (RooDataSet *)rawdata->reduce(cut1&&cut2);                 //It will complain if cut is empty, and I do not know why. Weimin Song 2021-09-19
+    //ftot.fitTo(*data, Minos(kFALSE), Extended(true), Save(kTRUE));
+    //  
+    //* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+    
+    RooFitResult* r = ftot.fitTo(*rawdata, Minos(kFALSE), Extended(true), Save(kTRUE));             //* * *  i add this line
+    //ftot.fitTo(*rawdata, Minos(kFALSE), Extended(true), Save(kTRUE));                             //* * *  i cancel this line
+    
+    ///////////////////////////////////////////////////////////////////////////////
+    
+
+    cout<<"hiiiiiiiiiii"<<endl;
+    cout<<"* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"<<endl; 
+    cout<<endl;
+    r->printValue(cout);
+    r->Print();
+    cout<<endl;
+    cout<<"* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"<<endl;
+    cout<<"hahahahahaha"<<endl;
+    cout<<endl;
+    cout<<endl;
+    cout<<endl;
+
+    /////////////////////////////////////////////////////////////////////////////////
+
+    TCanvas *canvas1=new TCanvas("canvas1","spec",200,10,800,700);
+    RooPlot* frame = mmass.frame(50);
+    rawdata->plotOn(frame);
+    ftot.plotOn(frame);
+    ftot.plotOn(frame, Components("gauss1"), LineColor(kGreen));
+    ftot.plotOn(frame, Components("fbkg"), LineColor(kRed));
+    mean.setPlotLabel("m_{0}");
+    sigma.setPlotLabel("#sigma_{m}");
+    nsig.setPlotLabel("N_{sig}");
+    nbkg.setPlotLabel("N_{bkg}");
+    ftot.paramOn(frame, Parameters(RooArgSet(mean,sigma,nsig,nbkg)),Format("NE", AutoPrecision(1)),Layout(0.66, 0.99, 0.98));
+    frame->SetXTitle("Mass_{D^{0}} (GeV/c^{2})");
+    frame->SetYTitle("Events/4 MeV/c^{2}");
+    frame->GetXaxis()->CenterTitle();
+    frame->GetYaxis()->CenterTitle();
+    frame->chiSquare(2);
+    frame->Draw();
+    canvas1->SaveAs("XXX.png");
+    //canvas1->SaveAs("XXX.eps");
+
+    cout<<"* * * * * * * * * * * * * * * * * * * * * * *"<<endl;
+    cout<<"* * * hello world, the program execution completed."<<endl;
+    cout<<"* * * * * * * * * * * * * * * * * * * * * * *"<<endl;
+    
+    fclose(stdout); 
+
+    //////////////////////////////////////////////////////////////////////////////////
+    delete chaindata;
+    delete canvas1;
+}
