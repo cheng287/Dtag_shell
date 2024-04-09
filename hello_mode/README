@@ -1,0 +1,29 @@
+Introduction:
+    1)The 'hello_mode.sh', 'infor_mode.head', 'infor_mode.tail' are a set, which used to generate jobs.
+    2)The 'sub_sh.head' and 'sub_make_hello_mode.sh' are a set, which used to submit jobs to the cluster.
+    3)The run_mode.sh is a separate file used to run jobs with a local terminal .
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+How to use it ?
+To execute this shell code, you just need to enter :
+    ./hello_mode.sh jobname  [jobN] [fileN]
+    such as  ./hello_mode.sh data 30 50   or   ./hello_mode.sh data 30 1 
+
+    (1) When you enter 3 parameters, the second parameter does not work (but i recommend you do it). 
+        When this code is executed, it will generate a series of C++ jobs (i do not know how many [jobN]) and each c++ file contains 50 root files (or less). 
+
+    (2) This code is used  to generate new root file.
+        By executing this code, it will extract information from the existing root file and save the result as a new root file.
+    (3) It will generate a series of directories, for example, 
+            ../output/mode_0, ../output/mode_1 , ../output/mode_2, ../output/mode_50, and ../output/root. 
+
+        Under the ../output/root directory, it includes subdirectories such as mode_0, mode_1, mode_50 and so on.
+            ../output/root/mode_0    ../output/root/mode_1  and so on
+
+
+To submit these works, you just enter:
+    ./sub_mode.sh jobname
+ such as   ./sub_mode.sh data  (submit jobs to the cluster)
+    or 
+   ./run_mode.sh jobname (use your local terminal)
