@@ -1,0 +1,62 @@
+Introduction:
+    1)The 'hello_fit.sh', 'fitjob.head', 'fitjob.tail' are a set, which used to generate jobs. 
+        or
+      The 'hello_fit.sh', 'Ds_fitjob.head', 'Ds_fitjob.tail' are a set, which used to generate jobs.
+   
+   
+    2)The 'sub_sh.head' and 'sub_fit.sh' are a set, which used to submit jobs to the cluster.
+    3)The run_fit.sh is a separate file used to run jobs with a local terminal .
+
+    
+    4)The 'hello_weight_fit.sh', 'fitjob.head', 'fitjob.tail' are aslo a set, which used to generate jobs. 
+        or
+      The 'hello_weight_fit.sh', 'Ds_fitjob.head', 'Ds_fitjob.tail' are also a set, which used to generate jobs.
+      
+      But it is used for weight job. - - - -  We generate a series of weight-root file, which take as the weight
+      when we fit using this variable as the weight factor and details you can find in ../generate_weight/README .
+
+    5) The 're_hello_fit.sh', 're_fitjob.head', ' re_Ds_fitjob.head', and 're_run_fit.sh' are a set, which used 
+        to re-run the faild jobs.
+
+    Notice:
+       The 'fitjob.head  fitjob.tail'  or  'Ds_fitjob.head  Ds_fitjob.tail' are differnt in 'hello_fit.sh' and  'hello_weight_fit.sh',
+       you should change the contents for *head and *tail. 
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+How to use it ?
+To execute this shell code, you just need to enter :
+    ./hello_fit.sh jobname  [jobN] [fileN]   or  ./hello_weihgt_fit.sh jobname  [jobN] [fileN]
+    such as  ./hello_fit.sh data 30 50   or   ./hello_fit.sh data 30 1 
+
+    (1) When you enter 3 parameters, the second parameter does not work (but i recommend you do it). 
+    When this code is executed, it will generate a series of C++ jobs (i do not know how many [jobN]) and each c++ file contains 50 root files (or less). 
+
+    (2) This code is used  to generate new root file.
+        By executing this code, it will extract information from the existing root file and save the result as a new root file.
+    (3) It will generate a series of directories, for example, 
+        ../output/fit/mode_0, ../output/fit/mode_1 , ../output/fit/mode_2, ../output/fit/mode_50, and ../output/root. 
+
+    Under the ../output/fit/mode_i directory, it includes subdirectories (energ points) such as 4610, 4620 and so on.
+        ../output/root/mode_0/4610    
+        ../output/root/mode_1/4610  and so on
+
+
+    To submit these works, you just enter:
+       ./sub_fit.sh jobname
+    such as   ./sub_fit.sh data  (submit jobs to the cluster)
+       or 
+      ./run_fit.sh jobname (use your local terminal)
+
+
+
+Note:- - - - - - - - - - - - -
+  hello_weight_fit.sh - - - for data sample
+  hello_fit.sh - - - - for MC
+
+
+
+  hello_momentum_diff_wgt_fit.sh   re_hello_momentum_diff_wgt_fit.sh  run_only_momentumfit.sh  - - - for momentum differential 
+
+  

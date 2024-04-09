@@ -1,0 +1,93 @@
+    tagDm Data(chaindata);
+    cout<<endl;
+    const auto nentries = chaindata->GetEntries();
+    cout<<"- - - -the initial number of events for chaindata  =  "<< nentries <<endl;
+
+    //////////////////////// the temporarily generated tree - - -newtree
+    TTree *newtree = new TTree("newtree","");
+    Double_t        m_mass;
+    newtree->Branch("m_mass"  ,  &m_mass   , "m_mass/D");  
+
+    // for(int i = 0 ; i < 1e3;i++)
+    for (auto i : ROOT::TSeqI(nentries))
+    {
+        Data.GetEntry(i);
+        if( Data.mDp >= MOMENTUM_Min && Data.mDp < MOMENTUM_Max && Data.mDpz/Data.mDp >= COSTHETA_Min  && Data.mDpz/Data.mDp < COSTHETA_Max && Data.mcharm == 1)
+        {
+            m_mass   = Data.mmass ;       
+            newtree->Fill();
+        }      
+    }
+    newtree->Print();
+    cout<<"newtree->GetEntries()- - - the number of events for newtree  = " << (int) newtree->GetEntries() <<endl;
+    
+    /////////////////////////begin to fit//////////////////////////////////////////////////////
+    
+    
+    RooDataSet *newdata = new RooDataSet("newdata", "newdata", RooArgSet(mmass),Import(*newtree));
+    cout<<"- - - - newtree->GetEntries() - - - - afer add weight, the number of events for newtree  = "<< newdata->sumEntries()<<"  * *  weight 2  =  "<< newdata->weight() <<endl;
+    
+    newdata->Print("V");
+    RooFitResult* r = ftot.fitTo(*newdata, Minos(kFALSE), Extended(true), Save(kTRUE),SumW2Error(kTRUE));    
+       
+    
+    ///////////////////////////////////////////////////////////////////////////////
+    
+    cout<<"output_begin_output_begin"<<endl;
+    cout<<"* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"<<endl; 
+    cout<<endl;
+    r->printValue(cout);
+    r->Print();
+    cout<<endl;
+    cout<<"* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"<<endl;
+    cout<<"output_end_output_end"<<endl;
+    cout<<endl;
+    cout<<endl;
+    cout<<endl;
+
+    /////////////////////////////////////////////////////////////////////////////////
+
+    TCanvas *canvas1=new TCanvas("canvas1","spec",200,10,800,700);
+    RooPlot* frame = mmass.frame(50);
+    
+    newdata->plotOn(frame,DataError(RooAbsData::SumW2)) ;  //* * * i add
+
+    ftot.plotOn(frame);
+    ftot.plotOn(frame, Components("gauss1"), LineColor(kGreen));
+    ftot.plotOn(frame, Components("fbkg"), LineColor(kRed));
+    mean.setPlotLabel("m_{0}");
+    sigma.setPlotLabel("#sigma_{m}");
+    nsig.setPlotLabel("N_{sig}");
+    nbkg.setPlotLabel("N_{bkg}");
+    ftot.paramOn(frame, Parameters(RooArgSet(mean,sigma,nsig,nbkg)),Format("NE", AutoPrecision(1)),Layout(0.66, 0.99, 0.98));
+    // frame->SetXTitle("Mass D^{0} (GeV/c^{2})");
+    frame->SetXTitle("Mass DDD (GeV/c^{2})");
+    frame->SetYTitle("Events/4 MeV/c^{2}");
+    frame->GetXaxis()->CenterTitle();
+    frame->GetYaxis()->CenterTitle();
+    frame->chiSquare(2);
+    frame->Draw();
+
+    TPaveText *pt = new TPaveText(0.3, 0.75, 0.4, 0.85,"blNDC");
+    pt->SetBorderSize(0);
+    pt->SetTextSize(0.05);
+    pt->SetFillColor(0);
+    pt->AddText("HHH");
+    pt->Draw("sames");
+    
+
+    canvas1->SaveAs("XXX.png");
+
+    cout<<"* * * * * * * * * * * * * * * * * * * * * * *"<<endl;
+    cout<<"* * * hello world, the program execution completed."<<endl;
+    cout<<"* * * * * * * * * * * * * * * * * * * * * * *"<<endl;
+    
+    fclose(stdout); 
+
+    //////////////////////////////////////////////////////////////////////////////////
+    delete chaindata;
+    delete newdata;
+    delete canvas1;
+    delete newtree;
+}
+    

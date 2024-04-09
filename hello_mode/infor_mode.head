@@ -1,0 +1,5 @@
+#include "/besfs5/groups/psip/psipgroup/user/liucheng/Rc_data/new_run/706_4610to4700/tagDm.C"
+
+void XXX()
+{
+    TChain *chaindata=new TChain("tagDm");

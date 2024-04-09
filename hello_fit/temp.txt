@@ -1,0 +1,2 @@
+/besfs5/groups/psip/psipgroup/user/liucheng/cross_section/Rc_new_run/rscan/output/root/mode_401/rscan_4590_mode401_001.root
+/besfs5/groups/psip/psipgroup/user/liucheng/cross_section/Rc_new_run/rscan/output/root/mode_401/rscan_4590_mode401_002.root

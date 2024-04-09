@@ -1,0 +1,12 @@
+1) The 'decay_mode.txt' is the DTag Decay Mode , such as 0 , 1, 50 ,200  and so on.
+2) The 'infor.txt' includes the energy point number, luminosity, run number low, run number high and center-of-mass energy information.
+
+    For example,   
+                decay_mode.txt             |                           infor.txt
+                  0                        |                 4740  210   65208  65321   4.74          
+                  1                        |                 4750  211   65322  65494   4.75        
+                  2                        |                 4780  212   65495  65645   4.78      
+                                           |                 4840  213   65646  65864   4.84    
+
+
+* * * *  Note that you should change the 'decay_mode.txt' and 'infor.txt' as needed   ! ! ! ! 

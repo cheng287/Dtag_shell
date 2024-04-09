@@ -1,0 +1,233 @@
+#include "RooRealVar.h"
+#include "RooDataSet.h"
+#include "RooGaussian.h"
+#include "RooChebychev.h"
+#include "RooAddPdf.h"
+#include "TCanvas.h"
+#include "TAxis.h"
+#include "RooPlot.h"
+#include <cstdio>
+#include <iostream> 
+#include "/besfs5/groups/psip/psipgroup/user/liucheng/Rc_data/new_run/706_4610to4700/tagDm.C"
+
+using namespace RooFit;
+// Set the general style options
+void SetStyle()
+{
+    gStyle->SetOptStat(kFALSE);
+    // No Canvas Border
+    gStyle->SetCanvasBorderMode(0);
+    gStyle->SetCanvasBorderSize(0);
+    // White BG
+    gStyle->SetCanvasColor(10);
+    // Format for axes
+    gStyle->SetLabelFont(42,"xyz");
+    gStyle->SetLabelSize(0.04,"xyz");
+    gStyle->SetLabelOffset(0.01,"xyz");
+    gStyle->SetNdivisions(510,"xyz");
+    gStyle->SetTitleFont(42,"xyz");
+    gStyle->SetTitleColor(1,"xyz");
+    gStyle->SetTitleSize(0.07,"xyz");
+    gStyle->SetTitleOffset(1.15,"xyz");
+    // No pad borders
+    gStyle->SetPadBorderMode(0);
+    gStyle->SetPadBorderSize(0);
+    // White BG
+    gStyle->SetPadColor(10);
+    // Margins for labels etc.
+    // No error bars in x direction
+    gStyle->SetErrorX(0);
+    // Format legend
+    gStyle->SetOptTitle(0);
+    gStyle->SetPadLeftMargin(0.22);
+    gStyle->SetPadBottomMargin(0.20);
+    gStyle->SetPadRightMargin(0.05);
+    gStyle->SetPadTopMargin(0.10);
+}
+void FormatMC1(TH1 * mc1hist, Int_t color)
+{
+    mc1hist->SetLineColor(color);
+    mc1hist->SetLineWidth(4);
+}
+void NameAxes(TH1 * datahist, TString xname, TString yname)
+{
+    if(xname)
+        datahist->GetXaxis()->SetTitle(xname);
+    if(yname)
+        datahist->GetYaxis()->SetTitle(yname);
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+
+
+void XXX()
+{
+
+    freopen("XXX.cpp.sh.out","w",stdout); 
+    
+    SetStyle();
+    
+    // const char* filename = "/besfs5/groups/psip/psipgroup/user/liucheng/cross_section/Rc_new_run/4612to4946/decay_mode_and_infor/single_result_mode_XXMODE.txt";  // change there, the path ! ! !
+    
+    const char* filename = "/besfs5/groups/psip/psipgroup/user/liucheng/cross_section/sys/fit_range/eff/eff_weight_list/change_single_result_mode_XXMODE.txt";
+    std::ifstream infile(filename);
+    if (!infile.is_open())
+    {
+        std::cerr << "Error: Unable to open file " << filename << std::endl;
+    }
+
+    std::vector<double> column1 , column2, column3, column4, column5, column8, column9;   //  c0  c1  fsig        mean1       mean2           sigma1            sigma2    
+    column1.clear();
+    column2.clear();
+    column3.clear();
+    column4.clear();
+    column5.clear();
+    column8.clear();
+    column9.clear();
+    double value;
+    std::string line;
+
+    // skip first line
+    std::getline(infile, line);
+
+    // Read the data in columns 3, 4, 5, 8, and 9
+    while (std::getline(infile, line)) 
+    {
+        std::istringstream iss(line);
+
+        // Skip first column (file path)
+        std::string file_path;
+        iss >> file_path;
+
+        if (!(iss >> value)) {
+            std::cerr << "Error reading data from line: " << line << std::endl;
+        }
+        column1.push_back(value);
+
+        if (!(iss >> value)) {
+            std::cerr << "Error reading data from line: " << line << std::endl;
+        }
+        column2.push_back(value);
+
+
+        // Read column 3
+        if (!(iss >> value)) {
+            std::cerr << "Error reading data from line: " << line << std::endl;
+        }
+        column3.push_back(value);
+
+        // Read column 4
+        if (!(iss >> value)) {
+            std::cerr << "Error reading data from line: " << line << std::endl;
+           
+        }
+        column4.push_back(value);
+
+        // Read column 5
+        if (!(iss >> value)) {
+            std::cerr << "Error reading data from line: " << line << std::endl;
+            
+        }
+        column5.push_back(value);
+
+        // discard two columns, column 6, 7
+        for (int i = 1; i <= 2; ++i) {
+            if (!(iss >> value)) {
+                std::cerr << "Error reading data from line: " << line << std::endl;
+               
+            }
+        }
+
+        // Read column 8
+        if (!(iss >> value)) {
+            std::cerr << "Error reading data from line: " << line << std::endl;
+           
+        }
+        column8.push_back(value);
+
+        // Read column 9
+        if (!(iss >> value)) {
+            std::cerr << "Error reading data from line: " << line << std::endl;
+            
+        }
+        column9.push_back(value);
+    }
+
+    // for (int i =0 ; i < column5.size(); i++)
+    // {
+    //     cout<<column1[i] <<"      "<<column2[i] <<"      "  <<column3[i] <<"      "<<column4[i] <<"      "  <<column5[i] <<"      "<<column8[i] << "   " <<column9[i]<<endl;
+    // }
+
+
+
+
+    ////////////////////////////////////////////////////////
+    cout<<"paramter_begin_paramter_begin"<<endl;
+
+
+    // RooRealVar  mmass("m_mass", "invariant pmass", 1.75, 1.95, "GeV/c^{2}");
+    
+    RooRealVar  mmass("m_mass", "invariant pmass", 1.8, 1.93, "GeV/c^{2}");
+    RooRealVar  wgt("m_weight","mweight",0,100);
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Create an empty list to store all Gaussian and coefficient functions
+    RooArgList gaussians;
+    RooArgList coefficients;
+
+    // int ii = 0;
+
+    // for (int i = 0; i < 500; ++i) 
+    for(int i = 0; i< column4.size();++i)
+    {
+        RooRealVar* mean1 = new RooRealVar(("mean1_" + to_string(i)).c_str(), "", column4[i],  1.84, 1.9);
+        mean1->setConstant();
+        RooRealVar* sigma1 = new RooRealVar(("sigma1_" + to_string(i)).c_str(), "", column8[i], 0.0001,0.025);
+        sigma1->setConstant();
+
+        RooGaussian *gauss1 = new RooGaussian(Form("gauss1_%d", i), "", mmass, *mean1, *sigma1);
+
+        RooRealVar* mean2 = new RooRealVar(("mean2_" + to_string(i)).c_str(), "", column5[i],  1.84, 1.9);
+        mean2->setConstant();
+        RooRealVar* sigma2= new RooRealVar(("sigma2_" + to_string(i)).c_str(), "", column9[i], 0.0001,0.025);
+        sigma2->setConstant();
+
+        RooGaussian *gauss2 = new RooGaussian(Form("gauss2_%d", i), "", mmass, *mean2, *sigma2);
+
+        RooRealVar* fsig = new RooRealVar(("fsig_" + to_string(i)).c_str(), "", column3[i], 0., 1);
+        fsig->setConstant();  
+
+        // Create a linearly additive double Gaussian model
+        RooAddPdf *gauss_combined = new RooAddPdf(Form("gauss_combined_%d", i), "", RooArgList(*gauss1, *gauss2), *fsig);
+      
+        RooRealVar* fe = new RooRealVar(("fe_" + std::to_string(i)).c_str(), "", 0.002, 0.0, 1.0);
+        fe->setConstant();
+        
+        coefficients.add(*fe);
+        gaussians.add(*gauss_combined);
+        
+        // ii++;
+    }
+
+
+    RooAddPdf gauss12("gauss12", "", gaussians, coefficients,false);
+
+    RooRealVar   c0("c0","coefficient 0",-0.01,-2.0,2.0);
+    RooRealVar   c1("c1","coefficient 1",0.01,-1.,1.);
+    RooChebychev fbkg("fbkg","FBKG",mmass,RooArgList(c0,c1));
+
+    RooRealVar nsig("nsig", "NSig", 200000., 0., 4000000.);
+    RooRealVar nbkg("nbkg", "NBKG", 1500000., 0., 5500000.);
+    RooAddPdf  ftot("ftot", "Ftot", RooArgList(gauss12, fbkg), RooArgList(nsig,nbkg));
+
+
+
+    cout<<"paramter_end_paramter_end"<<endl;
+    
+    ////////////////////////////////////////////////////////
+
+    ///////////////////////- - Merge two different trees into a new tree - - -begin///////////////
+    
+    TChain *chaindata=new TChain("tagDm");
+

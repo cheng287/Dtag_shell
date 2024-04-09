@@ -1,0 +1,180 @@
+    tagDm Data(chaindata);
+    const auto nentries = chaindata->GetEntries();
+    cout<<"nentries = "<<nentries<<endl;
+        
+    TTree* newtree = new TTree("tagDm", "New Tree");
+
+    Int_t           mmode;
+    Double_t        mtype;
+    Int_t           mcharm;
+    Double_t        mmass;
+    Double_t        mDp;
+    Double_t        mDe;
+    Double_t        mDpx;
+    Double_t        mDpy;
+    Double_t        mDpz;
+    Double_t        mDct;
+    Int_t           mrun;
+    Int_t           mevent;
+
+    Int_t           xxindexmc;
+    Int_t           indexmc;
+    Int_t           pdgid[100];   //[indexmc]
+    Int_t           motheridx[100];   //[indexmc]
+    Int_t           motherid[100];   //[indexmc]
+    // Double_t        mc_D0[4];
+    // Double_t        mc_D0bar[4];
+    // Double_t        mc_Dp[4];
+    // Double_t        mc_Dm[4];
+    // Double_t        mc_Dsp[4];
+    // Double_t        mc_Dsm[4];
+
+   Double_t        D0_km[4];
+   Double_t        D0_pip[4];
+   Double_t        D0bar_kp[4];
+   Double_t        D0bar_pim[4];
+   Double_t        Dp_km[4];
+   Double_t        Dp_pip1[4];
+   Double_t        Dp_pip2[4];
+   Double_t        Dm_kp[4];
+   Double_t        Dm_pim1[4];
+   Double_t        Dm_pim2[4];
+   Double_t        Dsp_km[4];
+   Double_t        Dsp_kp[4];
+   Double_t        Dsp_pip[4];
+   Double_t        Dsm_km[4];
+   Double_t        Dsm_kp[4];
+   Double_t        Dsm_pim[4];
+
+
+    // Create new branches in the new tree with the same structure
+    newtree->Branch("mmode",    &mmode,     "mmode/I");
+    newtree->Branch("mtype",    &mtype,     "mtype/D");
+    newtree->Branch("mcharm",   &mcharm,    "mcharm/I");
+    newtree->Branch("mmass",    &mmass,     "mmass/D");
+    newtree->Branch("mDp",      &mDp,       "mDp/D");
+    newtree->Branch("mDe",      &mDe,       "mDe/D");
+    newtree->Branch("mDpx",     &mDpx,      "mDpx/D");
+    newtree->Branch("mDpy",     &mDpy,      "mDpy/D");
+    newtree->Branch("mDpz",     &mDpz,      "mDpz/D");
+    newtree->Branch("mDct",     &mDct,      "mDct/D");
+    newtree->Branch("mrun",     &mrun,      "mrun/I");
+    newtree->Branch("mevent",   &mevent,    "mevent/I");
+
+
+    newtree->Branch("xxindexmc",      &xxindexmc,     "xxindexmc/I");
+    newtree->Branch("indexmc",        &indexmc,       "indexmc/I");
+    newtree->Branch("pdgid",          pdgid,          "pdgid[indexmc]/I");
+    newtree->Branch("motheridx",      motheridx,      "motheridx[indexmc]/I");
+    newtree->Branch("motherid",       motherid,       "motherid[indexmc]/I");
+    // newtree->Branch("mc_D0",          mc_D0,          "mc_D0[4]/D");
+    // newtree->Branch("mc_D0bar",       mc_D0bar,       "mc_D0bar[4]/D");
+    // newtree->Branch("mc_Dp",          mc_Dp,          "mc_Dp[4]/D");
+    // newtree->Branch("mc_Dm",          mc_Dm,          "mc_Dm[4]/D");
+    // newtree->Branch("mc_Dsp",         mc_Dsp,         "mc_Dsp[4]/D");
+    // newtree->Branch("mc_Dsm",         mc_Dsm,         "mc_Dsm[4]/D");
+
+    newtree->Branch("D0_km" ,          D0_km       ,    "D0_km[4]/D");    
+    newtree->Branch("D0_pip" ,         D0_pip      ,    "D0_pip[4]/D");      
+    newtree->Branch("D0bar_kp" ,       D0bar_kp    ,    "D0bar_kp[4]/D");          
+    newtree->Branch("D0bar_pim" ,      D0bar_pim   ,    "D0bar_pim[4]/D");            
+    newtree->Branch("Dp_km" ,          Dp_km       ,    "Dp_km[4]/D");    
+    newtree->Branch("Dp_pip1" ,        Dp_pip1     ,    "Dp_pip1[4]/D");        
+    newtree->Branch("Dp_pip2" ,        Dp_pip2     ,    "Dp_pip2[4]/D");        
+    newtree->Branch("Dm_kp" ,          Dm_kp       ,    "Dm_kp[4]/D");    
+    newtree->Branch("Dm_pim1" ,        Dm_pim1     ,    "Dm_pim1[4]/D");        
+    newtree->Branch("Dm_pim2" ,        Dm_pim2     ,    "Dm_pim2[4]/D");        
+    newtree->Branch("Dsp_km" ,         Dsp_km      ,    "Dsp_km[4]/D");      
+    newtree->Branch("Dsp_kp" ,         Dsp_kp      ,    "Dsp_kp[4]/D");      
+    newtree->Branch("Dsp_pip" ,        Dsp_pip     ,    "Dsp_pip[4]/D");        
+    newtree->Branch("Dsm_km" ,         Dsm_km      ,    "Dsm_km[4]/D");      
+    newtree->Branch("Dsm_kp" ,         Dsm_kp      ,    "Dsm_kp[4]/D");      
+    newtree->Branch("Dsm_pim" ,        Dsm_pim     ,    "Dsm_pim[4]/D");        
+
+
+
+
+
+    //for(int j = 0;j < nentries;j++)
+    // for(int j = 0;j < 10e5;j++)
+    for (auto j : ROOT::TSeqI(nentries))
+    {
+        chaindata->GetEntry(j);
+        if(Data.mmode ==HHH_MODE && ((Data.mrun<= HHHRUN_HIGH) && (Data.mrun>= HHHRUN_LOW))) 
+        {
+                      
+             vector<int> bb_pdgid ;
+             vector<int> bb_motheridx;
+             vector<int> bb_motherid;
+             bb_pdgid.clear();
+             bb_motheridx.clear();
+             bb_motherid.clear();
+
+             for(int i = 0; i < Data.indexmc ; i++)
+            {
+                bb_pdgid.push_back(Data.pdgid[i]) ;
+                bb_motheridx.push_back(Data.motheridx[i]);    
+                bb_motherid.push_back(Data.motherid[i]) ;   
+            }
+            
+            indexmc = bb_pdgid.size();
+
+            for(int i = 0; i< bb_pdgid.size();i++)
+            {
+              pdgid[i]      = bb_pdgid[i]     ;
+              motheridx[i]  = bb_motheridx[i] ;    
+              motherid[i]   = bb_motherid[i]  ;   
+            }
+            
+            xxindexmc = Data.xxindexmc;
+
+            for(int i = 0; i < 4 ; i++)
+            {
+                // mc_D0[i]    = Data.mc_D0[i];
+                // mc_D0bar[i] = Data.mc_D0bar[i];
+                // mc_Dp[i]    = Data.mc_Dp[i];
+                // mc_Dm[i]    = Data.mc_Dm[i];
+                // mc_Dsp[i]   = Data.mc_Dsp[i];
+                // mc_Dsm[i]   = Data.mc_Dsm[i];
+
+                D0_km[i]    = Data.D0_km[i]    ; 
+                D0_pip[i]   = Data.D0_pip[i]   ;  
+                D0bar_kp[i] = Data.D0bar_kp[i] ;    
+                D0bar_pim[i]= Data.D0bar_pim[i];     
+                Dp_km[i]    = Data.Dp_km[i]    ; 
+                Dp_pip1[i]  = Data.Dp_pip1[i]  ;   
+                Dp_pip2[i]  = Data.Dp_pip2[i]  ;   
+                Dm_kp[i]    = Data.Dm_kp[i]    ; 
+                Dm_pim1[i]  = Data.Dm_pim1[i]  ;   
+                Dm_pim2[i]  = Data.Dm_pim2[i]  ;   
+                Dsp_km[i]   = Data.Dsp_km[i]   ;  
+                Dsp_kp[i]   = Data.Dsp_kp[i]   ;  
+                Dsp_pip[i]  = Data.Dsp_pip[i]  ;   
+                Dsm_km[i]   = Data.Dsm_km[i]   ;  
+                Dsm_kp[i]   = Data.Dsm_kp[i]   ;  
+                Dsm_pim[i]  = Data.Dsm_pim[i]  ;   
+            }
+
+            mmode    = Data.mmode;   
+            mtype    = Data.mtype;   
+            mcharm   = Data.mcharm;  
+            mmass    = Data.mmass;   
+            mDp      = Data.mDp;     
+            mDe      = Data.mDe;     
+            mDpx     = Data.mDpx;    
+            mDpy     = Data.mDpy;    
+            mDpz     = Data.mDpz;    
+            mDct     = Data.mDct;    
+            mrun     = Data.mrun;    
+            mevent   = Data.mevent;  
+        
+            newtree->Fill();
+        }
+    }
+        
+    TFile f("../root/mode_HHH_MODE/XXX.root","recreate");
+    newtree->Write();
+    f.Close();
+
+    cout<<"* * * * * ok, it is finished ! ! ! "<<endl;
+}

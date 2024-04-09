@@ -1,0 +1,57 @@
+    
+    
+    
+    RooRealVar  mmass("m_mass", "invariant pmass", 1.93, 2.01, "GeV/c^{2}");
+    RooRealVar  wgt("m_weight","mweight",0,100);
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Create an empty list to store all Gaussian and coefficient functions
+    RooArgList gaussians;
+    RooArgList coefficients;
+
+    // int ii = 0;
+
+    // for (int i = 0; i < 500; ++i) 
+    for(int i = 0; i< column4.size();++i)
+    {
+        RooRealVar* mean1 = new RooRealVar(("mean1_" + to_string(i)).c_str(), "", column4[i],  1.92, 2.02);
+        mean1->setConstant();
+        RooRealVar* sigma1 = new RooRealVar(("sigma1_" + to_string(i)).c_str(), "", column8[i], 0.0001,0.03);
+        sigma1->setConstant();
+
+        RooGaussian *gauss1 = new RooGaussian(Form("gauss1_%d", i), "", mmass, *mean1, *sigma1);
+
+        RooRealVar* mean2 = new RooRealVar(("mean2_" + to_string(i)).c_str(), "", column5[i],  1.92, 2.02);
+        mean2->setConstant();
+        RooRealVar* sigma2= new RooRealVar(("sigma2_" + to_string(i)).c_str(), "", column9[i], 0.0001,0.03);
+        sigma2->setConstant();
+
+        RooGaussian *gauss2 = new RooGaussian(Form("gauss2_%d", i), "", mmass, *mean2, *sigma2);
+
+        RooRealVar* fsig = new RooRealVar(("fsig_" + to_string(i)).c_str(), "", column3[i], 0., 1);
+        fsig->setConstant();  
+
+        // Create a linearly additive double Gaussian model
+        RooAddPdf *gauss_combined = new RooAddPdf(Form("gauss_combined_%d", i), "", RooArgList(*gauss1, *gauss2), *fsig);
+      
+        RooRealVar* fe = new RooRealVar(("fe_" + std::to_string(i)).c_str(), "", 0.002, 0.0, 1.0);
+        fe->setConstant();
+        
+        coefficients.add(*fe);
+        gaussians.add(*gauss_combined);
+        
+        // ii++;
+    }
+
+
+    RooAddPdf gauss12("gauss12", "", gaussians, coefficients,false);
+
+    RooRealVar   c0("c0","coefficient 0",-0.01,-2.0,2.0);
+    RooRealVar   c1("c1","coefficient 1",0.01,-1.5,1.);
+    RooChebychev fbkg("fbkg","FBKG",mmass,RooArgList(c0,c1));
+
+    RooRealVar nsig("nsig", "NSig", 200., 0., 4000.);
+    RooRealVar nbkg("nbkg", "NBKG", 1500., 0., 5500.);
+    RooAddPdf  ftot("ftot", "Ftot", RooArgList(gauss12, fbkg), RooArgList(nsig,nbkg));
+
+
