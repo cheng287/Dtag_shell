@@ -1,0 +1,5 @@
+/besfs5/groups/psip/psipgroup/user/liucheng/cross_section/Rc_new_run/new_low_xyz/output/root/mode_401/data_4946_mode401_001.root
+/besfs5/groups/psip/psipgroup/user/liucheng/cross_section/Rc_new_run/new_low_xyz/output/root/mode_401/data_4946_mode401_002.root
+/besfs5/groups/psip/psipgroup/user/liucheng/cross_section/Rc_new_run/new_low_xyz/output/root/mode_401/data_4946_mode401_003.root
+/besfs5/groups/psip/psipgroup/user/liucheng/cross_section/Rc_new_run/new_low_xyz/output/root/mode_401/data_4946_mode401_004.root
+/besfs5/groups/psip/psipgroup/user/liucheng/cross_section/Rc_new_run/new_low_xyz/output/root/mode_401/data_4946_mode401_005.root

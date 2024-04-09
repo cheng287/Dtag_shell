@@ -1,0 +1,148 @@
+    tagDm Data(chaindata);
+    cout<<endl;
+    const auto nentries = chaindata->GetEntries();
+    cout<<"- - - -the initial number of events for chaindata  =  "<< nentries <<endl;
+
+    TChain *wgt_tree= new TChain("weight"); 
+    wgt_tree->Add("WEIGHT_Tree_WEIGHT_Tree");
+    cout<<"- - - - - weight tree - - number of events  = "<<  wgt_tree->GetEntries() <<endl;
+
+    Double_t x_wgt;
+    wgt_tree->SetBranchAddress("wgt", &x_wgt);
+
+
+    // TCut cut1 = "mmode== MODE_MODE && mcharm == CHARM_CHARM ";
+    // TCut cut1 = "CUT_CUT && mDp <=2.5";
+
+    // TTree *oldtree = chaindata->CopyTree(cut1);
+    // cout<<"* * * * after cut- - - the number of chaindata events =  "<<  (int) oldtree->GetEntries()<<endl;
+    // cout<<endl;
+    // 
+    // Double_t    b_mass;
+    // oldtree->SetBranchAddress("mmass"  ,  &b_mass  );
+
+    ////////////////////
+    TTree *oldtree = new TTree("oldtree","");
+    Double_t    o_mass;
+    oldtree->Branch("o_mass"  ,  &o_mass ,"o_mass/D" );
+
+    for (auto i : ROOT::TSeqI(nentries))
+    {
+        Data.GetEntry(i);
+        if(CUT_CUT && Data.mDp <=2.5)
+        {
+            o_mass =  Data.mmass;
+            oldtree->Fill();
+        }       
+    }
+    oldtree->Print();
+    cout<<"* * * * after cut- - - the number of chaindata events =  "<<  (int) oldtree->GetEntries()<<endl;
+
+    Double_t    b_mass;
+    oldtree->SetBranchAddress("o_mass"  ,  &b_mass  );
+
+
+    //////////////////////// the temporarily generated tree - - -newtree
+    TTree *newtree = new TTree("newtree","");
+    Double_t        m_weight;
+    Double_t        m_mass;
+    newtree->Branch("m_weight",  &m_weight,  "m_weight/D");  
+    newtree->Branch("m_mass"  ,  &m_mass   , "m_mass/D");  
+
+    for(int i = 0 ; i < (int) oldtree->GetEntries();i++)
+    {
+        oldtree->GetEntry(i);
+        wgt_tree->GetEntry(i);
+        m_weight = x_wgt;   
+        m_mass   = b_mass ;       
+
+        newtree->Fill();
+    }
+    newtree->Print();
+    cout<<"newtree->GetEntries()- - - the number of events for newtree  = " << (int) newtree->GetEntries() <<endl;
+
+    cout<<"- - - - -  -after the oldtree(chaindata) + wgt_tree  - - -  - -"<<endl<<endl;
+    ////////////////////////////////Merge two trees into a new tree - - -end////////////////////////////////////////
+
+    
+    /////////////////////////begin to fit//////////////////////////////////////////////////////
+    
+    
+    RooDataSet *newdata = new RooDataSet("newdata", "newdata", RooArgSet(mmass,wgt), WeightVar(wgt),Import(*newtree));
+    cout<<"- - - - newtree->GetEntries() - - - - afer add weight, the number of events for newtree  = "<< newdata->sumEntries()<<"  * *  weight 2  =  "<< newdata->weight() <<endl;
+    
+    newdata->Print("V");
+    RooFitResult* r = ftot.fitTo(*newdata, Minos(kFALSE), Extended(true), Save(kTRUE),SumW2Error(kTRUE));    
+       
+    
+    ///////////////////////////////////////////////////////////////////////////////
+    
+    cout<<"output_begin_output_begin"<<endl;
+    cout<<"* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"<<endl; 
+    cout<<endl;
+    r->printValue(cout);
+    r->Print();
+    cout<<endl;
+    cout<<"* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"<<endl;
+    cout<<"output_end_output_end"<<endl;
+    cout<<endl;
+    cout<<endl;
+    cout<<endl;
+
+    /////////////////////////////////////////////////////////////////////////////////
+
+    TCanvas *canvas1=new TCanvas("canvas1","spec",200,10,800,700);
+    RooPlot* frame = mmass.frame(50);
+    
+    newdata->plotOn(frame,DataError(RooAbsData::SumW2)) ;  //* * * i add
+
+    ftot.plotOn(frame);
+    ftot.plotOn(frame, Components("gauss1"), LineColor(kGreen));
+    ftot.plotOn(frame, Components("gauss2"), LineColor(6));   // -- - i add  xxxxxxxx
+    ftot.plotOn(frame, Components("fbkg"), LineColor(kRed));
+  
+    mean1.setPlotLabel("m_{01}");
+    sigma1.setPlotLabel("#sigma_{m1}");
+    mean2.setPlotLabel("m_{02}");
+    sigma2.setPlotLabel("#sigma_{m2}");
+    fsig.setPlotLabel("f_{sig}");
+    nsig.setPlotLabel("N_{sig}");
+    nbkg.setPlotLabel("N_{bkg}");
+
+    ftot.paramOn(frame, Parameters(RooArgSet(mean1,sigma1,mean2,sigma2,fsig,nsig,nbkg)),Format("NE", AutoPrecision(1)),Layout(0.7, 0.99, 0.98));
+
+
+    frame->SetXTitle("Mass DDD (GeV/c^{2})");
+    frame->SetYTitle("Events/4 MeV/c^{2}");
+    frame->GetXaxis()->CenterTitle();
+    frame->GetYaxis()->CenterTitle();
+    frame->chiSquare(2);
+    frame->Draw();
+
+    TPaveText *pt = new TPaveText(0.3, 0.6, 0.4, 0.7,"blNDC");
+    pt->SetBorderSize(0);
+    pt->SetTextSize(0.05);
+    pt->SetFillColor(0);
+    pt->SetFillStyle(0); // 设置背景为透明
+    pt->SetFillColorAlpha(0,0); 
+    pt->AddText("HHH");
+    pt->Draw("sames");
+    
+
+    canvas1->SaveAs("XXX.png");
+
+    cout<<"* * * * * * * * * * * * * * * * * * * * * * *"<<endl;
+    cout<<"* * * hello world, the program execution completed."<<endl;
+    cout<<"* * * * * * * * * * * * * * * * * * * * * * *"<<endl;
+    
+    fclose(stdout); 
+
+    //////////////////////////////////////////////////////////////////////////////////
+    delete chaindata;
+    delete newdata;
+    delete canvas1;
+    delete newtree;
+    delete oldtree;
+    delete wgt_tree;
+}
+    

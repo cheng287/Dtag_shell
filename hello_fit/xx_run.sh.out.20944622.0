@@ -1,0 +1,1136 @@
+number of p_min              =   500
+number of p_max              =   500
+number of costheta_min       =   500
+number of costheta_max       =   500
+number of cosp_mode          =   500
+costheta_min: -1.0 -0.9 -0.8 -0.7 -0.6 -0.5 -0.4 -0.3 -0.2 -0.1 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9
+costheta_max: -0.9 -0.8 -0.7 -0.6 -0.5 -0.4 -0.3 -0.2 -0.1 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0
+cosp_mode:    001 002 003 004 005 006 007 008 009 010 011 012 013 014 015 016 017 018 019 020
+number of xx_costheta_min       =   20
+number of xx_costheta_max       =   20
+number of xx_cos_mode           =   20
+number of decay mode points   =   3
+
+ energy points : 
+380765 389624 400762 408545 412848 415744 418859 418880 419890 420773 420920 421713 421870 422626 423570 424166 424380 425797 426680 427770 428788 430789 431205 433739 435826 437737 438740 439645 441558 443624 446706 452714 457450 459953 4610 4620 4640 4660 4680 4700 4740 4750 4780 4840 4914 4946
+
+ luminosity points : 
+50.54 52.61 482 52.86 401.5 408.7 43.33 526.7 526 54.95 517.1 54.6 514.6 1100.9 530.3 55.88 538.1 828.4 531.1 175.7 502.4 45.08 501.2 505 543.9 522.7 55.57 507.8 1090.7 569.9 111.09 112.12 48.93 586.9 103.65 521.53 551.65 529.43 1667.39 535.54 163.87 366.55 511.47 525.16 207.82 159.28
+
+ run number low : 
+33490 33572 23463 33659 59163 59574 30372 47543 48172 31983 48714 32046 49270 30438 49788 32141 50255 29677 50796 51303 59902 30492 60364 60808 30616 61249 31281 61763 31327 62286 36245 36398 36603 35227 64314 63075 63516 63718 63867 64028 65208 65322 65495 65647 65867 65938
+
+ run number high : 
+33556 33657 24141 33719 59573 59896 30437 48170 48713 32045 49239 32140 49787 30491 50254 32226 50793 30367 51302 51498 60363 30557 60805 61242 31279 61762 31325 62285 31390 62823 36393 36588 36699 36213 64360 63515 63715 63852 64015 64313 65307 65494 65645 65864 65935 66224
+
+ CMS energy : 
+3.80765 3.89624 4.00762 4.08545 4.12848 4.15744 4.18859 4.1888 4.1989 4.20773 4.2092 4.21713 4.2187 4.22626 4.2357 4.24166 4.2438 4.25797 4.2668 4.2777 4.28788 4.30789 4.31205 4.33739 4.35826 4.37737 4.3874 4.39645 4.41558 4.43624 4.46706 4.52714 4.5745 4.59953 4.61186 4.62800 4.64091 4.66124 4.68192 4.69882 4.73970 4.75005 4.78054 4.84307 4.91802 4.95093
+number of energy points       =   46
+number of luminosity points   =   46
+number of run number low      =   46
+number of run number high     =   46
+number of CMS energy          =   46
+../output/more_gaussian_fit/mode_0/380765 is ok
+
+Processing mass_fit_xyz_380765_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/389624 is ok
+
+Processing mass_fit_xyz_389624_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/400762 is ok
+
+Processing mass_fit_xyz_400762_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/408545 is ok
+
+Processing mass_fit_xyz_408545_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/412848 is ok
+
+Processing mass_fit_xyz_412848_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/415744 is ok
+
+Processing mass_fit_xyz_415744_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/418859 is ok
+
+Processing mass_fit_xyz_418859_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/418880 is ok
+
+Processing mass_fit_xyz_418880_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/419890 is ok
+
+Processing mass_fit_xyz_419890_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/420773 is ok
+
+Processing mass_fit_xyz_420773_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/420920 is ok
+
+Processing mass_fit_xyz_420920_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/421713 is ok
+
+Processing mass_fit_xyz_421713_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/421870 is ok
+
+Processing mass_fit_xyz_421870_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/422626 is ok
+
+Processing mass_fit_xyz_422626_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/423570 is ok
+
+Processing mass_fit_xyz_423570_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/424166 is ok
+
+Processing mass_fit_xyz_424166_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/424380 is ok
+
+Processing mass_fit_xyz_424380_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/425797 is ok
+
+Processing mass_fit_xyz_425797_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/426680 is ok
+
+Processing mass_fit_xyz_426680_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/427770 is ok
+
+Processing mass_fit_xyz_427770_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/428788 is ok
+
+Processing mass_fit_xyz_428788_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/430789 is ok
+
+Processing mass_fit_xyz_430789_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/431205 is ok
+
+Processing mass_fit_xyz_431205_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/433739 is ok
+
+Processing mass_fit_xyz_433739_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/435826 is ok
+
+Processing mass_fit_xyz_435826_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/437737 is ok
+
+Processing mass_fit_xyz_437737_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/438740 is ok
+
+Processing mass_fit_xyz_438740_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/439645 is ok
+
+Processing mass_fit_xyz_439645_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/441558 is ok
+
+Processing mass_fit_xyz_441558_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/443624 is ok
+
+Processing mass_fit_xyz_443624_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/446706 is ok
+
+Processing mass_fit_xyz_446706_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/452714 is ok
+
+Processing mass_fit_xyz_452714_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/457450 is ok
+
+Processing mass_fit_xyz_457450_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/459953 is ok
+
+Processing mass_fit_xyz_459953_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/4610 is ok
+
+Processing mass_fit_xyz_4610_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/4620 is ok
+
+Processing mass_fit_xyz_4620_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/4640 is ok
+
+Processing mass_fit_xyz_4640_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/4660 is ok
+
+Processing mass_fit_xyz_4660_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/4680 is ok
+
+Processing mass_fit_xyz_4680_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/4700 is ok
+
+Processing mass_fit_xyz_4700_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/4740 is ok
+
+Processing mass_fit_xyz_4740_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/4750 is ok
+
+Processing mass_fit_xyz_4750_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/4780 is ok
+
+Processing mass_fit_xyz_4780_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/4840 is ok
+
+Processing mass_fit_xyz_4840_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/4914 is ok
+
+Processing mass_fit_xyz_4914_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_0/4946 is ok
+
+Processing mass_fit_xyz_4946_mode0_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/380765 is ok
+
+Processing mass_fit_xyz_380765_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/389624 is ok
+
+Processing mass_fit_xyz_389624_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/400762 is ok
+
+Processing mass_fit_xyz_400762_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/408545 is ok
+
+Processing mass_fit_xyz_408545_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/412848 is ok
+
+Processing mass_fit_xyz_412848_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/415744 is ok
+
+Processing mass_fit_xyz_415744_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/418859 is ok
+
+Processing mass_fit_xyz_418859_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/418880 is ok
+
+Processing mass_fit_xyz_418880_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/419890 is ok
+
+Processing mass_fit_xyz_419890_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/420773 is ok
+
+Processing mass_fit_xyz_420773_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/420920 is ok
+
+Processing mass_fit_xyz_420920_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/421713 is ok
+
+Processing mass_fit_xyz_421713_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/421870 is ok
+
+Processing mass_fit_xyz_421870_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/422626 is ok
+
+Processing mass_fit_xyz_422626_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/423570 is ok
+
+Processing mass_fit_xyz_423570_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/424166 is ok
+
+Processing mass_fit_xyz_424166_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/424380 is ok
+
+Processing mass_fit_xyz_424380_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/425797 is ok
+
+Processing mass_fit_xyz_425797_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/426680 is ok
+
+Processing mass_fit_xyz_426680_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/427770 is ok
+
+Processing mass_fit_xyz_427770_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/428788 is ok
+
+Processing mass_fit_xyz_428788_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/430789 is ok
+
+Processing mass_fit_xyz_430789_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/431205 is ok
+
+Processing mass_fit_xyz_431205_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/433739 is ok
+
+Processing mass_fit_xyz_433739_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/435826 is ok
+
+Processing mass_fit_xyz_435826_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/437737 is ok
+
+Processing mass_fit_xyz_437737_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/438740 is ok
+
+Processing mass_fit_xyz_438740_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/439645 is ok
+
+Processing mass_fit_xyz_439645_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/441558 is ok
+
+Processing mass_fit_xyz_441558_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/443624 is ok
+
+Processing mass_fit_xyz_443624_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/446706 is ok
+
+Processing mass_fit_xyz_446706_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/452714 is ok
+
+Processing mass_fit_xyz_452714_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/457450 is ok
+
+Processing mass_fit_xyz_457450_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/459953 is ok
+
+Processing mass_fit_xyz_459953_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/4610 is ok
+
+Processing mass_fit_xyz_4610_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/4620 is ok
+
+Processing mass_fit_xyz_4620_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/4640 is ok
+
+Processing mass_fit_xyz_4640_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/4660 is ok
+
+Processing mass_fit_xyz_4660_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/4680 is ok
+
+Processing mass_fit_xyz_4680_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/4700 is ok
+
+Processing mass_fit_xyz_4700_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/4740 is ok
+
+Processing mass_fit_xyz_4740_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/4750 is ok
+
+Processing mass_fit_xyz_4750_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/4780 is ok
+
+Processing mass_fit_xyz_4780_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/4840 is ok
+
+Processing mass_fit_xyz_4840_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/4914 is ok
+
+Processing mass_fit_xyz_4914_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_200/4946 is ok
+
+Processing mass_fit_xyz_4946_mode200_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/380765 is ok
+
+Processing mass_fit_xyz_380765_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/389624 is ok
+
+Processing mass_fit_xyz_389624_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/400762 is ok
+
+Processing mass_fit_xyz_400762_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/408545 is ok
+
+Processing mass_fit_xyz_408545_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/412848 is ok
+
+Processing mass_fit_xyz_412848_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/415744 is ok
+
+Processing mass_fit_xyz_415744_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/418859 is ok
+
+Processing mass_fit_xyz_418859_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/418880 is ok
+
+Processing mass_fit_xyz_418880_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/419890 is ok
+
+Processing mass_fit_xyz_419890_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/420773 is ok
+
+Processing mass_fit_xyz_420773_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/420920 is ok
+
+Processing mass_fit_xyz_420920_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/421713 is ok
+
+Processing mass_fit_xyz_421713_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/421870 is ok
+
+Processing mass_fit_xyz_421870_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/422626 is ok
+
+Processing mass_fit_xyz_422626_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/423570 is ok
+
+Processing mass_fit_xyz_423570_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/424166 is ok
+
+Processing mass_fit_xyz_424166_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/424380 is ok
+
+Processing mass_fit_xyz_424380_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/425797 is ok
+
+Processing mass_fit_xyz_425797_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/426680 is ok
+
+Processing mass_fit_xyz_426680_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/427770 is ok
+
+Processing mass_fit_xyz_427770_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/428788 is ok
+
+Processing mass_fit_xyz_428788_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/430789 is ok
+
+Processing mass_fit_xyz_430789_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/431205 is ok
+
+Processing mass_fit_xyz_431205_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/433739 is ok
+
+Processing mass_fit_xyz_433739_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/435826 is ok
+
+Processing mass_fit_xyz_435826_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/437737 is ok
+
+Processing mass_fit_xyz_437737_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/438740 is ok
+
+Processing mass_fit_xyz_438740_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/439645 is ok
+
+Processing mass_fit_xyz_439645_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/441558 is ok
+
+Processing mass_fit_xyz_441558_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/443624 is ok
+
+Processing mass_fit_xyz_443624_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/446706 is ok
+
+Processing mass_fit_xyz_446706_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/452714 is ok
+
+Processing mass_fit_xyz_452714_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/457450 is ok
+
+Processing mass_fit_xyz_457450_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/459953 is ok
+
+Processing mass_fit_xyz_459953_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/4610 is ok
+
+Processing mass_fit_xyz_4610_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/4620 is ok
+
+Processing mass_fit_xyz_4620_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/4640 is ok
+
+Processing mass_fit_xyz_4640_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/4660 is ok
+
+Processing mass_fit_xyz_4660_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/4680 is ok
+
+Processing mass_fit_xyz_4680_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/4700 is ok
+
+Processing mass_fit_xyz_4700_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/4740 is ok
+
+Processing mass_fit_xyz_4740_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/4750 is ok
+
+Processing mass_fit_xyz_4750_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/4780 is ok
+
+Processing mass_fit_xyz_4780_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/4840 is ok
+
+Processing mass_fit_xyz_4840_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/4914 is ok
+
+Processing mass_fit_xyz_4914_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+../output/more_gaussian_fit/mode_401/4946 is ok
+
+Processing mass_fit_xyz_4946_mode401_file_001.cpp...
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
